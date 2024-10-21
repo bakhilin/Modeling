@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 from scipy.stats import expon
 
 # Параметры распределения
-a1 = 406515.850962572
-a2 =  0.76072506
-q1 = 0.00017
+a1 = 76.282794802
+a2 =  12.254846795
+q1 = 0.9
 q2 = 1-q1
 
 # Генерация случайных чисел из экспоненциального распределения
@@ -24,9 +24,9 @@ for value in result:
     print(value)
 
 # Запись результата в файл
-with open('random.txt', 'w') as file:
-    for value in result:
-        file.write(f"{value}\n")
+# with open('random.txt', 'w') as file:
+#     for value in result:
+#         file.write(f"{value}\n")
 
 # Построение графика
 plt.figure(figsize=(10, 6))

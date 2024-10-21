@@ -6,7 +6,7 @@ from statsmodels.tsa.stattools import adfuller
 from statsmodels.tsa.stattools import adfuller, acf
 
 data = []
-with open('data.txt', 'r') as f:
+with open('data/data.txt', 'r') as f:
     data = [line.strip() for line in f]
 data = [float(i) for i in data]
 

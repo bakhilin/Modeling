@@ -93,7 +93,7 @@ def start():
     # Чтение данных из файла
     data_str = []
     try:
-        with open('random.txt', 'r') as f:
+        with open('data/random.txt', 'r') as f:
             data_str = [line.strip() for line in f]
     except FileNotFoundError:
         print("Файл 'random.txt' не найден.")
