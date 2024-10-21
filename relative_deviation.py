@@ -19,6 +19,9 @@ main_data_095 = [24.50,16.297,17.84,14.69,10.15]
 generated_data_099 = [72.11,51.8,26.4,20.84,17.18]
 main_data_099 = [35.205,22.27,23.79,19.44,13.39]
 
+autokor_data =[-0.0044, 0.0306, -0.0187, -0.0194, -0.0249, 0.0056, 0.0749, -0.0253, 0.0856, -0.0077]
+autokor_random =[-0.0231, 0.0083, 0.0698, 0.0451, 0.0585, -0.1086, -0.1032, -0.0286, -0.0553, -0.0223]
+
 sdvig = [10,20,50,100,200]
 
 def deviation(name, gen_data, main_data):
@@ -26,6 +29,14 @@ def deviation(name, gen_data, main_data):
     for i in range(len(sdvig)):
         result = (gen_data[i]-main_data[i]) / main_data[i]
         print(sdvig[i],result*100)
+
+autokor_sdvig = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+def deviation_autokor(name, gen_data, main_data):
+    print(name)
+    for i in range(len(autokor_sdvig)):
+        result = (gen_data[i]-main_data[i]) / main_data[i]
+        print(autokor_sdvig[i],result*100)
 
 
 if __name__ == '__main__':
@@ -36,3 +47,4 @@ if __name__ == '__main__':
     deviation('Дов инт 0.9 %', generated_data_09, main_data_09)
     deviation('Дов инт 0.95 %',generated_data_095, main_data_095)
     deviation('Дов инт 0.99 %', generated_data_099, main_data_099)
+    deviation_autokor('Автокорреляционное сравнение %', autokor_random, autokor_data)

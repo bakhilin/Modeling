@@ -5,7 +5,7 @@ import scipy.stats as stats
 import os
 
 # read csv
-path = os.path.abspath("/home/nikita/Desktop/5sem/model/Modeling/data/data.csv")
+path = os.path.abspath("/home/skull32/Modeling/data/data.csv")
 data_df = pd.read_csv(path)
 sequence = data_df["values"]
 data = data_df["values"].values
@@ -44,10 +44,3 @@ for lag, coeff in zip(lag_values, autocorrelation_coeffs):
     print(f"Сдвиг {lag}: {coeff:.4f}")
 
 
-# Графическое представление автокорреляции
-plt.figure(figsize=(10, 4))
-plt.bar(range(1, 11), autocorrelation_coeffs)
-plt.title('Автокорреляция заданной ЧП (сдвиг от 1 до 10)')
-plt.xlabel('Сдвиг')
-plt.ylabel('Коэффициент автокорреляции')
-plt.show()
